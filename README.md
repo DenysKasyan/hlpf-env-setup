@@ -96,3 +96,51 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+
+## Student
+
+- Name: Денис
+- Group: 232/2
+
+## Практичне заняття №2 — NestJS + PostgreSQL + Redis
+
+## Структура репозиторію
+
+
+.
+├── src/ # NestJS source code
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example # шаблон змінних оточення
+└── README.md
+
+
+## Запуск проекту
+
+```bash
+cp .env.example .env
+docker compose up --build
+Перевірка сервісів
+NAME                          STATUS
+hlpf-env-setup-app-1          running
+hlpf-env-setup-postgres-1     running (healthy)
+hlpf-env-setup-redis-1        running (healthy)
+Перевірка PostgreSQL
+List of databases
+ Name    |  Owner   
+---------+----------
+ nestdb  | nestuser
+ postgres| nestuser
+ template0
+ template1
+Перевірка Redis
+PONG
+Перевірка застосунку
+Hello World!
+Логи NestJS (фрагмент)
+[Nest] LOG [NestFactory] Starting Nest application...
+[Nest] LOG [InstanceLoader] AppModule dependencies initialized
+[Nest] LOG [RouterExplorer] Mapped {/, GET} route
+[Nest] LOG [NestApplication] Nest application successfully started
